@@ -2,6 +2,7 @@ from typing import Optional
 
 from unit import BaseUnit
 
+
 class BaseSingleton(type):
     _instances = {}
 
@@ -34,13 +35,11 @@ class Arena(metaclass=BaseSingleton):
         if self.battle_result is not None:
             return self._end_game()
 
-
     def _stamina_regeneration(self):
         if self.player.stamina + Arena.STAMINA_PER_ROUND < self.player.unit_class.max_stamina:
             self.player.stamina += Arena.STAMINA_PER_ROUND
         if self.enemy.stamina + Arena.STAMINA_PER_ROUND < self.enemy.unit_class.max_stamina:
             self.enemy.stamina += Arena.STAMINA_PER_ROUND
-
 
     def next_turn(self):
         result = self._check_players_hp()

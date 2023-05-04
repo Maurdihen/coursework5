@@ -53,7 +53,6 @@ class Berserker(Skill):
     _stamina: float = 6
     _damage: float = 12
 
-
     @property
     def name(self) -> str:
         return self._name
@@ -80,7 +79,6 @@ class Berserker(Skill):
         self.user.stamina -= self.stamina
         self.target.hp -= self.damage
         return f"{self.user.name} в ярости! {self.target.hp} получил {self.damage} урона!"
-
 
 
 class HardShot(Skill):

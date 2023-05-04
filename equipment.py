@@ -23,7 +23,6 @@ class Weapon:
     max_damage: float
     stamina_per_hit: float
 
-
     @property
     def damage(self):
         return uniform(self.min_damage, self.max_damage)
