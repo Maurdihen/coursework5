@@ -1,4 +1,3 @@
-
 @dataclass
 class UnitClass:
     name: str
